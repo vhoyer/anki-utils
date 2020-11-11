@@ -1,10 +1,4 @@
-RTK Extractor
+My Anki Utils
 ==========================
 
-Dependencies
-------------
-
-This template project expects you already have installed on your system the following programs:
-
-- [git](https://git-scm.com)
-- [node and npm](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm)
+Little scripts and CSVs I used to populate my anki decks and stuff, feel free to use them.
