@@ -8,3 +8,13 @@ line lose access to the resources from that app, so I'm making this backup that
 I will probably just end up throwing into Anki and get rid of the original app
 for good, which is kinda sad, because it's a great app in my option, but
 whatever. :smile:
+
+## Other resources used
+
+- http://www.lexique.org/?page_id=250
+
+## Not used resources, but probably nice links
+
+- http://corpus.leeds.ac.uk/frqc/internet-jp.num
+- https://github.com/hingston/japanese
+- https://github.com/gfahl/japanese-word-frequency
