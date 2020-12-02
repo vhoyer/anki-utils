@@ -1,0 +1,1 @@
+import './vocabulary.mjs'
