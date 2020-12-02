@@ -1,1 +1,1 @@
-import './vocabulary.mjs'
+import './kanji.mjs'
