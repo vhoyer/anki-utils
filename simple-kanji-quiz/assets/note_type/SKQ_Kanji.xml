@@ -1,0 +1,64 @@
+<Front>
+  {{#Tags}}<span style="color:#339922;font-size: 22px;">{{Tags}}</span><br>{{/Tags}}
+
+  <div class="chars">
+    <div style="font-family:StrokeOrder; font-size:50vmin; height:55vmin; transform:translateY(-6vmin);">{{字}}</div>
+
+    <div class="sechars">
+      <span style="font-family:YUMIN;" class="secondary">{{字}}</span>
+      <span style="font-family:YUGOTHB;" class="secondary">{{字}}</span>
+      <span style="font-family:HGRKK;" class="secondary">{{字}}</span>
+      <span class="secondary">{{字}}</span>
+    </div>
+  </div>
+</Front>
+
+<Back>
+  {{FrontSide}}
+
+  <hr id=answer>
+
+  {{#ふりがな}}<span style="font-family:YUMIN; font-size:25px;">{{ふりがな}}</span>{{/ふりがな}}
+  {{#Meanings}}<span style="font-size: 25px; ">{{Meanings}}</span>{{/Meanings}}
+
+  <div class="links">
+    <a href="https://hochanh.github.io/rtk/{{字}}/index.html">hochanh</a>
+    ✧
+    <a href="https://jisho.org/search/%23kanji%20{{字}}">jisho.org</a>
+  </div>
+</Back>
+
+<Style>
+  .card {
+    font-family: times new roman;
+    font-size: 22px;
+    background-color:#FFFAF0;
+    color:#2A1B0A;
+  }
+
+  @font-face { font-family: YUMIN; src: url('_YUMIN.ttf');  font-display:swap;}
+  @font-face { font-family: StrokeOrder; src: url('_StrokeOrder.ttf');  font-display:swap;}
+  @font-face { font-family: HGRKK; src: url('_HGRKK.ttc');  font-display:swap;}
+  @font-face { font-family: YUGOTHB; src: url('_YUGOTHB.ttc'); font-display:swap; }
+
+  .secondary {
+    font-size: 20vmin;
+    display: block;
+  }
+
+  .chars {
+    text-align: center;
+  }
+
+  .sechars {
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    height: 30vmin;
+  }
+
+  .links {
+    text-align: center;
+    margin-bottom: 4px;
+  }
+</Style>
