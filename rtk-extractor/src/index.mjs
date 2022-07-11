@@ -25,7 +25,16 @@ const selector = {
 const kanjiCardCsvLine = (values) => {
   const s = key => values[key] || ''
 
-  return `${s('character')}	${s('keyword')}	${s('number')}	${s('definition')}	${s('exampleWord')}	${s('story')}	${s('primitives')}	RTK\n`
+  return [
+    s('character'),
+    s('keyword'),
+    s('number'),
+    s('definition'),
+    s('exampleWord'),
+    s('story'),
+    s('primitives'),
+    'RTK\n',
+  ].join('\t')
 }
 
 const KanjiCard = function($) {
