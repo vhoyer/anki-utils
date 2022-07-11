@@ -5,7 +5,7 @@ import fs from 'fs'
 
 const hochanhKanjiUrl = kanji => encodeURI(`https://hochanh.github.io/rtk/${kanji}/index.html`)
 
-const lastNext = hochanhKanjiUrl('')
+const lastNext = 'https://hochanh.github.io/rtk/index.html'
 const fisrtChar = '一'
 
 const [
