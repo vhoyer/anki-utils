@@ -56,6 +56,9 @@ const KanjiCard = function($) {
 }
 
 function go(currentUrl) {
+  const start = performance.now()
+  console.log(currentUrl)
+
   return axios.get(currentUrl).then((response) => {
     const $ = cheerio.load(response.data);
 
@@ -67,6 +70,9 @@ function go(currentUrl) {
     )
 
     fs.appendFileSync(output, kanji.toString())
+
+    console.log(`finished in: ${performance.now() - start}ms`)
+    console.log(kanji.toString())
 
     return nextUrl
   })
