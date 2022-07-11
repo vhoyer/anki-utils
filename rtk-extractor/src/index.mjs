@@ -43,6 +43,13 @@ const KanjiCard = function($) {
   }
 }
 
+const stats = {
+  count: 0,
+  max: -Infinity,
+  min: Infinity,
+  avg: 0,
+}
+
 function go(currentUrl) {
   const start = performance.now()
   console.log(currentUrl)
@@ -59,7 +66,17 @@ function go(currentUrl) {
 
     fs.appendFileSync(output, kanji.toString())
 
-    console.log(`finished in: ${performance.now() - start}ms`)
+    const s = num => num.toString().replace(/\..*$/, '')
+    const finishedIn = performance.now() - start;
+    stats.max = Math.max(finishedIn, stats.max)
+    stats.min = Math.min(finishedIn, stats.min)
+    stats.avg = (stats.avg * stats.count + finishedIn) / ++stats.count;
+    console.log(`finished in: ${s(finishedIn)}ms`)
+    console.log([
+      `avg: ${s(stats.avg)}ms`,
+      `min: ${s(stats.min)}ms`,
+      `max: ${s(stats.max)}ms`,
+    ].join('\t'))
     console.log(kanji.toString())
 
     return nextUrl
