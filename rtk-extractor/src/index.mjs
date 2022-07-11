@@ -10,7 +10,7 @@ const fisrtChar = '一'
 
 const [
   startAtChar = fisrtChar,
-  output = 'output.csv'
+  output = ['output.debug.csv', 'output.csv'][0],
 ] = process.argv.slice(2);
 
 const selector = {
