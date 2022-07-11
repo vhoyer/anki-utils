@@ -17,9 +17,6 @@ const selector = {
   character: 'body > div.main > h1:nth-child(1)',
   keyword: 'body > div.main > h2:nth-child(4) > code',
   number: 'body > div.main > h2:nth-child(4) > code',
-  story: 'body > div.main > h2:contains("Heisig story:")',
-  primitives: 'body > div.main > h2:contains("Primitive:")',
-  comment: 'body > div.main > h2:contains("Heisig comment:")',
 }
 
 const kanjiCardCsvLine = (values) => {
@@ -29,10 +26,6 @@ const kanjiCardCsvLine = (values) => {
     s('character'),
     s('keyword'),
     s('number'),
-    s('definition'),
-    s('exampleWord'),
-    s('story'),
-    s('primitives'),
     'RTK\n',
   ].join('\t')
 }
@@ -42,11 +35,6 @@ const KanjiCard = function($) {
     character: $(selector.character).text().trim(),
     keyword: $(selector.keyword).text().trim(),
     number: $(selector.number).attr('title').replace(/.*V6:\s/, '').trim(),
-    story: (
-      $(selector.story).nextUntil('h2').text() +
-      $(selector.comment).nextUntil('h2').text()
-    ).replace('.*', '.<br><br>*'),
-    primitives: $(selector.primitives).nextUntil('h2').text(),
   }
 
   return {
