@@ -85,12 +85,7 @@ function go(currentUrl) {
 
 fs.writeFileSync(output, '', console.error)
 
-async function run() {
-  let nextUrl = hochanhKanjiUrl(startAtChar)
-
-  while(nextUrl !== lastNext) {
-    nextUrl = await go(nextUrl)
-  }
+let nextUrl = hochanhKanjiUrl(startAtChar)
+while(nextUrl !== lastNext) {
+  nextUrl = await go(nextUrl)
 }
-
-run()
